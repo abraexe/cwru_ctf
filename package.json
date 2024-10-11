@@ -1,0 +1,24 @@
+{
+  "name": "ctf",
+  "version": "1.0.0",
+  "description": "cwru.ccc.ctf",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celerystixx/cwru_ctf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celerystixx/cwru_ctf/issues"
+  },
+  "homepage": "https://github.com/celerystixx/cwru_ctf#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "mysql2": "^3.11.3"
+  }
+}

@@ -1,0 +1,362 @@
+/* overall settings */
+
+:root {
+    --space-cadet: #282B3E;
+    --purpureus: #BD93F0;
+    --silver-lake-blue: #6C91BF;
+    --tiffany-blue: #A3E0D2;
+    --vanilla: #F7E1A1;
+    --basically-white: #FEFEFA;
+    --block: #323750;
+    --pt-mono: 'PT Mono';
+    --montserrat: 'Montserrat';
+}
+
+body {
+    background: var(--space-cadet);
+    max-width: 100%;
+    aspect-ratio: 0.6/1;
+    margin: 0px;
+}
+
+/* header block */
+
+#header {
+    aspect-ratio: 20/1;
+    border-bottom: 0.1vw solid var(--silver-lake-blue);
+    position: relative;
+    /* to do - figure out fixed position */
+}
+
+#nav-bar {
+    position: absolute;
+    left: 45vw;
+    top: 0.8vw;
+    width: 53vw;
+    height: 3vw;
+}
+
+#about-button {
+    position: absolute;
+    left: 10vw;
+    top: 0.3vw;
+    width: 7vw;
+    height: 80%;
+    margin-left: 1vw;
+    background-color: var(--tiffany-blue);
+    color: var(--space-cadet);
+    font-family: var(--montserrat);
+    font-size: 1.4vw;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.4vw;
+}
+
+#nav-bar > h1 {
+    font-family: var(--montserrat);
+    font-size: 1.2vw;
+    color: var(--vanilla);
+    position: absolute;
+}
+
+#link1 > span, #link2 > span {
+    color: var(--basically-white);
+}
+
+#link1 {
+    position: absolute;
+    left: 19.5vw;
+}
+
+#link2 {
+    position: absolute;
+    left: 27.5vw;
+}
+
+#sign-in-button {
+    position: absolute;
+    font-family: var(--montserrat);
+    font-size: 1.4vw;
+    font-weight: bold;
+    background-color: var(--silver-lake-blue);
+    color: var(--space-cadet);
+    border: none;
+    border-radius: 0.4vw;
+    height: 80%;
+    top: 0.3vw;
+    left: 35vw;
+    width: 7vw;
+    margin-left: 1vw;
+}
+
+#sign-up-button {
+    position: absolute;
+    font-family: var(--montserrat);
+    font-size: 1.4vw;
+    font-weight: bold;
+    background-color: var(--purpureus);
+    color: var(--space-cadet);
+    border: none;
+    border-radius: 0.4vw;
+    height: 80%;
+    top: 0.3vw;
+    left: 43vw;
+    width: 7vw;
+    margin-left: 1vw;
+}
+
+
+#icon-header {
+    position: absolute;
+    left: 2vw;
+    top: 0.75vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+#star-header {
+    position: absolute;
+    left: -0.5vw;
+    top: 0.2vw;
+    width: 3vw;
+    height: 3vw;
+    stroke: var(--vanilla);
+    fill: var(--vanilla);
+    stroke-width: 0.3vw;
+}
+
+/* title block */
+
+#title {
+    position: relative;
+    aspect-ratio: 2.5/1;
+    border-bottom: 0.1vw solid var(--silver-lake-blue);
+}
+
+#title-text {   
+    width: 42vw;
+    height: 12vw;
+    top: 10vw;
+    left: 5vw;
+    font-family: var(--pt-mono);
+    color: var(--basically-white);
+    position: absolute; 
+    font-size: 2.3vw;
+    letter-spacing: 0.1vw;
+}
+
+#title-b {
+    color: var(--vanilla);
+}
+
+#star-title {
+    position: absolute;
+    top: 19.8vw;  
+    left: 5vw;
+    width: 3vw;
+    height: 3vw;
+    stroke: var(--tiffany-blue);
+    fill: var(--tiffany-blue);
+    stroke-width: 0.3vw;
+}
+
+#title-subtext { 
+    top: 18vw;  
+    left: 10vw;
+    width: 42vw;
+    position: absolute; 
+    font-family: var(--montserrat);
+    font-size: 1.3vw;
+    color: var(--purpureus);
+}
+
+#title-block {
+    position: relative;
+    background-color: var(--block);
+    height: 36vw;
+    width: 40vw;
+    left: 51vw;
+    margin: 3vw 3vw 3vw 5vw;
+    border-radius: 3vw;
+    font-family: var(--pt-mono);
+}
+
+#title-numbers {
+    color: var(--basically-white);
+    position: absolute;
+    height: 90%;
+    width: 5%;
+    left: 5%;
+    top: 5%;
+    line-height: 3.6vw;
+    font-size: 2.4vw;
+}
+
+#title-code {
+    position: absolute;
+    height: 90%;
+    width: 85%;
+    left: 12%;
+    top: 4.45%;
+    line-height: 3.6vw;
+    font-size: 2.4vw;
+    font-weight: lighter;
+    color: var(--vanilla);
+}
+
+#title-code > b {
+    font-weight: bold;
+    color: var(--basically-white);
+}
+
+.p {
+    color: var(--purpureus);
+}
+
+.s {
+    color: var(--silver-lake-blue);
+}
+
+.t {
+    color: var(--tiffany-blue);
+}
+
+#code-line {
+    position: absolute;
+    left: 11%;
+    top: 52%;
+    width: 10%;
+    height: 40%;
+    stroke: #FEFEFA33; /* --basically-white with alpha value adjusted */
+    stroke-width: 0.06vw;
+}
+
+#star-title-code {
+    position: absolute;
+    top: 31vw;  
+    left: 35vw;
+    width: 3vw;
+    height: 3vw;
+    stroke: var(--vanilla);
+    fill: var(--vanilla);
+    stroke-width: 0.3vw;
+}
+
+/* about block */
+
+#about {
+    aspect-ratio: 2.88/1;
+    border-bottom: 0.1vh solid var(--silver-lake-blue);
+}
+
+#about-block {
+    position: absolute;
+    background-color: var(--block);
+    height: 28vw;
+    width: 27vw;
+    margin-left: 3vw;
+    margin-top: 3.3vw;
+    border-radius: 3vw;
+}
+
+#about-numbers {
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    position: absolute;
+    height: 90%;
+    width: 2vw;
+    left: 1.8vw;
+    top: 1.8vw;
+    line-height: 2.7vw;
+    font-size: 1.9vw;
+}
+
+#about-code {
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    position: absolute;
+    height: 90%;
+    width: 20vw;
+    left: 4.5vw;
+    top: 1.8vw;
+    line-height: 2.68vw;
+    font-size: 1.9vw;
+}
+
+#about-code > b {
+    font-weight: bold;
+    color: var(--basically-white);
+}
+
+#about-what-block {
+    position: absolute;
+    height: 24vw;
+    width: 30vw;
+    margin-top: 6vw;
+    margin-left: 33vw;
+}
+
+#about-why-block {
+    position: absolute;
+    height: 24vw;
+    width: 30vw;
+    margin-top: 6vw;
+    margin-left: 67vw;
+}
+
+.info {
+    stroke: var(--purpureus);
+}
+
+#what-title-text, #why-title-text { 
+    top: -0.8vw;  
+    left: 6vw;
+    width: 42vw;
+    position: absolute; 
+    font-weight: light;
+    letter-spacing: 0.15vw;
+    font-family: var(--pt-mono);
+    font-size: 1.3vw;
+    color: var(--basically-white);
+}
+
+#what-text, #why-text { 
+    top: 4vw;  
+    left: 6vw;
+    width: 23vw;
+    position: absolute; 
+    font-weight: light;
+    letter-spacing: 0.15vw;
+    font-family: var(--montserrat);
+    font-size: 1.8vw;
+    color: var(--vanilla);
+}
+
+/* team block */
+
+#team {
+    aspect-ratio: 1.43/1;
+    border-bottom: 0.1vh solid var(--silver-lake-blue);
+}
+
+#team-text {   
+    width: 42vw;
+    height: 12vw;
+    top: 85vw;
+    left: 5vw;
+    font-family: var(--pt-mono);
+    color: var(--basically-white);
+    position: absolute; 
+    font-size: 1.7vw;
+    letter-spacing: 0.1vw;
+}
+
+#team-b {
+    color: var(--vanilla);
+}
+
+/* footer block */
+
+#footer {
+    aspect-ratio: 6/1;
+}
