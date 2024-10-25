@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <!-- importing stylesheets -->
+    <!-- <link rel="stylesheet" href="./index.css"/> -->
+    <link rel="stylesheet" href="./signup.css"/>
+    <link href='https://fonts.googleapis.com/css?family=PT Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id = "main">
+        <div id = "header">
+            <div id = "icon-header">
+                <svg id = "star-header" viewBox = "25 -5 50 50">
+                    <polygon class = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
+                </svg>
+            </div>
+            <div id = "nav-bar">
+                <!-- about ./page_etc ./page_etc sign in sign up -->
+                <button id="about-button">about</button>
+                <h1 id="link1">./<span>page</span>_<span>etc</span></h1>
+                <h1 id="link2">./<span>page</span>_<span>etc</span></h1>
+                <button id="sign-in-button" onclick="window.location.href='./signin.html'">sign in</button>
+                <button id="sign-up-button" onclick="window.location.href='./signup.html'">sign up</button>
+            </div>
+        </div>
+        <div id = "signup-block">
+            <form action="https://localhost:8307/api/v1/signup" method="post" id = "signup-form"> <!-- TODO: PLACEHOLDER DOMAIN AND PORT -- DO NOT LEAVE AS-IS-->
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" required><br><br>
+                
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" required><br><br>
+                
+                <label>
+                  <input type="checkbox" id="tos" required>
+                  I accept the <a href="/tos" target="_blank">Terms of Service</a>
+                </label><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+
+    </div>
+</body>
