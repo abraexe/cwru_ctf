@@ -26,7 +26,7 @@ body {
     aspect-ratio: 20/1;
     border-bottom: 0.1vw solid var(--silver-lake-blue);
     position: relative;
-    /* TODO: FIGURE OUT FIXED POSITION */
+    /* to do - figure out fixed position */
 }
 
 #nav-bar {
@@ -167,7 +167,7 @@ button {
     width: 25vw;
     height: 12.5vw;
     top: 19vw;
-    stroke: var(--tiffany-blue);
+    stroke: var(--purpureus);
 }
 
 #person {

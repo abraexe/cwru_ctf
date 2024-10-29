@@ -1,4 +1,5 @@
 /* overall settings */
+/* TODO: BREAKPOINTS */
 
 :root {
     --space-cadet: #282B3E;
@@ -25,7 +26,7 @@ body {
     aspect-ratio: 20/1;
     border-bottom: 0.1vw solid var(--silver-lake-blue);
     position: relative;
-    /* to do - figure out fixed position */
+    /* TODO: FIGURE OUT FIXED POSITION */
 }
 
 #nav-bar {
@@ -139,14 +140,14 @@ body {
     top: 10vw;
     left: 5vw;
     font-family: var(--pt-mono);
-    color: var(--basically-white);
+    color: var(--vanilla);
     position: absolute; 
     font-size: 2.3vw;
     letter-spacing: 0.1vw;
 }
 
 #title-b {
-    color: var(--vanilla);
+    color: var(--basically-white);
 }
 
 #star-title {
