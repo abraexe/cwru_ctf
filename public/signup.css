@@ -206,3 +206,44 @@ button {
     height: 41vw;
     top: 6.5vw;
 }
+
+input[type=text] {
+    position: absolute;
+    width: 38vw;
+    left: 4.5vw;
+    height: 5vw;
+    top: 4vw;
+    border-radius: 1.5vw;
+    background-color: #6C91BF33; /* silver lake blue with alpha value adjusted */
+    border: none;
+    font-family: var(--montserrat);
+    color: var(--vanilla);
+    font-size: 1.5vw;
+    padding-left: 2vw;
+}
+
+#user {
+    top: 12vw;
+}
+
+#pass {
+    top: 20vw;
+}
+
+#repass {
+    top: 28vw;
+}
+
+#go {
+    position: absolute;
+    width: 10vw;
+    left: 35vw;
+    height: 4vw;
+    top: 35vw;
+    border-radius: 1.5vw;
+    background-color: var(--purpureus);
+    border: none;
+    font-family: var(--pt-mono);
+    color: var(--space-cadet);
+    font-size: 1.5vw;
+}

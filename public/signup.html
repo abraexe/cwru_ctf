@@ -56,7 +56,18 @@
             </div>
         </div>
         <div id="form-block">
-
+            <input type = "text" id = "email" placeholder="email" v-model="email"/>
+            <input type = "text" id = "user" placeholder="username" v-model="user"/>
+            <input type = "text" id = "pass" placeholder="password" v-model="pass"/>
+            <input type = "text" id = "repass" placeholder="retype password" v-model="repass"/>
+            <button id="go">>> go</button>
         </div>
     </div>
 </body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const app = Vue.createApp({ 
+        
+    }); 
+    app.mount("#main")
+</script>

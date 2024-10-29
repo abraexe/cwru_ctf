@@ -39,7 +39,7 @@
             PS C:\Users\ccc.ctf\new\web> cd welcome <br>
             PS C:\Users\ccc.ctf\new\web> ls <br>
             &emsp;LastWriteTime  &emsp; Length  &emsp;   Name <br>
-            &emsp;10/27/24 12pm   &emsp;  44   &emsp;&emsp;&emsp;  new_user_welcome <br>
+            &emsp;10/27/24 12pm   &emsp;  44   &emsp;&emsp; &emsp; new_user_welcome <br>
             PS C:\Users\ccc.ctf\new\web> vim sign_up <br>
             PS C:\Users\ccc.ctf\new\web> ./new_user.exe <br>
         </div>
@@ -56,7 +56,16 @@
             </div>
         </div>
         <div id="form-block">
-
+            <input type = "text" id = "eu" placeholder="email / username" v-model="eu"/>
+            <input type = "text" id = "pass" placeholder="password" v-model="pass"/>
+            <button id="go">>> go</button>
         </div>
     </div>
 </body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script>
+    const app = Vue.createApp({ 
+        
+    }); 
+    app.mount("#main")
+</script>
