@@ -1,0 +1,159 @@
+body {
+    display: flex;
+    height: 100vh;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+    font-family: monospace;
+    /* background-color: #f0f0f0; */
+    background-size: cover;
+    opacity: 1;
+    transition: opacity 5s ease;
+
+    --circuit-gold: rgb(248,161,49);
+    --circuit-wire: rgb(17,58,35);
+    --circuit-silver: rgb(187,189,191);
+    --circuit-lime: rgb(65,125,91);
+    --circuit-board: rgb(29,92,61);
+
+    --chip-sticker: rgb(239,78,37);
+    --chip-font: rgb(255,255,255);
+    --chip-symbol: rgb(122,29,21);
+    --chip-top: rgb(56,54,78);
+    --chip-left: rgb(32,30,58);
+    --chip-bottom: rgb(19,20,30);
+    --chip-seam: rgb(19,20,30);
+    --chip-gold1: rgb(247,148,32);
+    --chip-gold2: rgb(251,202,48);
+
+    --slotIMG-wire: rgb(4,46,24);
+    --slotIMG-board: rgb(17,58,35);
+    --slotIMG-border1: rgb(187,189,191);
+    --slotIMG-border2: rgb(29,92,61);
+    --slotIMG-border3: rgb(17,58,35);
+
+    --border-border1: rgb(187,189,191);
+    --border-border2: rgb(29,92,61);
+    --border-border3: rgb(17,58,35);
+}
+/* #typeit {
+    font-size: 2em;
+    color: #333;
+} */
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+#shadow {
+    display: none;
+    position: absolute;
+}
+
+#loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: center;
+    height: 30vh;
+    width: 50vw;
+    background-color: #021564;
+    color: rgb(255, 255, 255);
+}
+
+#slot {
+    display: none;
+    position: absolute;
+    bottom: 0vh;
+    right: 10vw;
+}
+
+#border {
+    position: absolute;
+    display: none;
+}
+
+#draggable {
+    display: none;
+    position: absolute;
+    z-index: 9;
+    /* background-color: #f1f1f1; */
+    /* border: 1px solid #d3d3d3; */
+    text-align: center;
+}
+  
+#mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+#cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(3, 0, 30);
+    z-index: 500;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+#cover.fade-out {
+    opacity: 0;
+}
+
+#typeit {
+    z-index: 501;
+    color: rgb(255, 255, 255);
+}
+
+#circuit {
+    display: flex;
+    --gold: rgb(228, 23, 225);
+    --wire: rgb(23, 6, 153);
+    --silver: rgb(139, 228, 232);
+    --lime: rgb(143, 245, 92);
+    --board: rgb(10, 0, 104);
+    /* width: 100vw; */
+    height: 100vh;
+}
+
+#chip {
+    position: absolute;
+    --sticker: rgb(188, 37, 239);
+    --font: rgb(255, 255, 255);
+    --symbol: rgb(46, 0, 92);
+    --top: rgb(113, 0, 0);
+    --left: rgb(65, 0, 0);
+    --bottom: rgb(30, 0, 0);
+    --seam: rgb(30, 19, 19);
+    --gold1: rgb(228, 23, 225);
+    --gold2: rgb(240, 88, 238);
+    width: 300px;
+}
+
+#border {
+    position: absolute;
+    height: 330px;
+    --border1: rgb(117, 255, 223);
+    --border2: rgb(43, 0, 182);
+    --border3: rgb(0, 12, 83);
+}
+
+#slotIMG {
+    height: 330px;
+    --wire: rgb(21, 0, 97);
+    --board: rgb(20, 0, 76);
+    --border1: rgb(117, 255, 223);
+    --border2: rgb(43, 0, 182);
+    --border3: rgb(0, 12, 83);
+}

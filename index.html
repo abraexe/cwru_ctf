@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script src="script.js"></script>
+<body onload="run();">
+    <div id="cover">
+    </div>
+    <div id="typeit"></div>
+    <div id="loading">
+        Loading...
+    </div>
+    
+    <!-- Draggable DIV -->
+    <div id="draggable" data-flag="false">
+        <img src="assets/shadow.png" width="300" id="shadow">
+        <!-- <img src="assets/chip.png" width="300" id="chip"> -->
+        <canvas id="chip"></canvas>
+        <!-- <img src="assets/border.png" height="330" id="border"> -->
+        <canvas id="border"></canvas>
+    </div>
+    <div id="slot">
+        <!-- <img src="assets/slot.png" height="330"> -->
+         <canvas id="slotIMG"></canvas>
+    </div>
+    <canvas id="circuit"></canvas>
+</body>
+</html>
