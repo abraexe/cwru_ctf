@@ -1,3 +1,1 @@
-< cwru_ctf />
-
-a cwru student project
+for circuit startup animated thingie
