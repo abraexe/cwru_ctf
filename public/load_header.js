@@ -8,4 +8,4 @@ function loadHTML(elementId, url) {
     xhr.open("GET", url, true);
     xhr.send();
 }
-loadHTML("header", "header.html");
+loadHTML("header", "./assets/header.html");
