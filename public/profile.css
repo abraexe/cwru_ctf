@@ -1,0 +1,368 @@
+/* overall settings */
+/* TODO: BREAKPOINTS */
+
+:root {
+    --space-cadet: #282B3E;
+    --purpureus: #BD93F0;
+    --silver-lake-blue: #6C91BF;
+    --tiffany-blue: #A3E0D2;
+    --vanilla: #F7E1A1;
+    --basically-white: #FEFEFA;
+    --block: #323750;
+    --pt-mono: 'PT Mono';
+    --montserrat: 'Montserrat';
+}
+
+body {
+    background: var(--space-cadet);
+    max-width: 100%;
+    aspect-ratio: 16/9;
+    margin: 0px;
+}
+
+/* header block: MOVED TO header.css */
+
+/* TODO: BREAKPOINTS SO THIS STUFF ISN'T UGLY */
+
+#main {
+    width: 100%;
+    aspect-ratio: 20/9;
+    border-bottom: 0.1vw solid var(--silver-lake-blue);
+}
+
+#title {
+    position: absolute;
+    top: 7.5vw;
+    left: 2vw;
+    font-family: var(--pt-mono);
+    color: var(--vanilla);
+    font-size: 2vw;
+    letter-spacing: 0.1vw;
+}
+
+#title > b {
+    color: var(--basically-white);
+}
+
+/* user block */
+
+#user {
+    position: absolute;
+    background-color: var(--block);
+    border-radius: 2vw;
+    top: 12vw;
+    left: 2vw;
+    width: 27vw;
+    height: 35vw;
+}
+
+#pfp {
+    background-color: var(--space-cadet);
+    border-radius: 2vw;
+    width: 18vw;
+    height: 18vw;
+    margin-left: 4vw;
+    margin-top: 2vw;
+}
+
+#person {
+    stroke: var(--purpureus);
+}
+
+#user-numbers {
+    color: var(--vanilla);
+    font-family: var(--pt-mono);
+    position: absolute;
+    height: 12vw;
+    width: 20vw;
+    left: 4vw;
+    top: 21.5vw;
+    line-height: 2.68vw;
+    font-size: 1.1vw;
+}
+
+#user-info {
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    position: absolute;
+    height: 12vw;
+    width: 20vw;
+    left: 6vw;
+    top: 21.5vw;
+    line-height: 2.68vw;
+    font-size: 1.1vw;
+}
+
+/* notifs block */
+
+#notifs {
+    position: absolute;
+    background-color: var(--block);
+    border-radius: 2vw;
+    top: 12vw;
+    left: 32vw;
+    width: 30vw;
+    height: 20vw;
+}
+
+#notifs-text {
+    font-family: var(--pt-mono);
+    color: var(--basically-white);
+    font-size: 1.6vw;
+    position: absolute;
+    top: 1.3vw;
+    left: 2vw;
+}
+
+#notifs-text > b {
+    color: var(--tiffany-blue);
+}
+
+#notifs-panel {
+    background-color: var(--space-cadet);
+    border-bottom-left-radius: 1.8vw;
+    border-bottom-right-radius: 1.8vw;
+    width: 24vw;
+    height: 12.5vw;
+    margin-left: 2vw;
+    margin-top: 4vw;
+    position: absolute;
+    padding: 1vw;
+    overflow-y: scroll;
+    /* TODO: figure out why this doesn't work for some reason??? */
+    scrollbar-color: var(--silver-lake-blue);
+}
+
+.alert {
+    background-color: var(--tiffany-blue);
+    border-radius: 0.8vw;
+    width: 23.2vw;
+    height: 2.5vw;
+    font-family: var(--montserrat);
+    color: var(--space-cadet);
+    padding-top: 1vw;
+    padding-left: 0.8vw;
+    font-size: 1.1vw;
+    margin-bottom: 0.8vw;
+}
+
+/* team block */
+
+#team {
+    position: absolute;
+    background-color: var(--block);
+    border-radius: 2vw;
+    top: 12vw;
+    left: 65vw;
+    width: 31vw;
+    height: 20vw;
+}
+
+#team-text {
+    font-family: var(--pt-mono);
+    color: var(--vanilla);
+    font-size: 1.6vw;
+    position: absolute;
+    top: 1.3vw;
+    left: 2vw;
+}
+
+#team-text > span {
+    color: var(--basically-white);
+}
+
+#create {
+    margin-top: 4vw;
+    margin-left: 3vw;
+    height: 6vw;
+    width: 25vw;
+}
+
+#join {
+    margin-left: 3vw;
+    height: 6vw;
+    width: 25vw;
+}
+
+#create-person {
+    position: absolute;
+    top: 4.5vw;
+    left: 4vw;
+    stroke: var(--purpureus);
+}
+
+#join-person {
+    position: absolute;
+    top: 11vw;
+    left: 4vw;
+    stroke: var(--silver-lake-blue);
+}
+
+#create-text {
+    font-family: var(--montserrat);
+    color: var(--basically-white);
+    font-size: 1.6vw;
+    line-height: 2vw;
+    position: absolute;
+    top: 5vw;
+    left: 12vw;
+}
+
+#join-text {
+    font-family: var(--montserrat);
+    color: var(--basically-white);
+    font-size: 1.6vw;
+    line-height: 2vw;
+    position: absolute;
+    top: 12vw;
+    left: 12vw;
+}
+
+#join-text > span, #create-text > span {
+    color: var(--vanilla);
+}
+
+/* progress block */
+
+#progress {
+    position: absolute;
+    background-color: var(--block);
+    border-radius: 2vw;
+    top: 34vw;
+    left: 32vw;
+    width: 50vw;
+    height: 13vw;
+}
+
+#progress-text {
+    font-family: var(--pt-mono);
+    color: var(--vanilla);
+    font-size: 1.6vw;
+    position: absolute;
+    top: 1.3vw;
+    left: 2vw;
+}
+
+#progress-text > span {
+    color: var(--basically-white);
+}
+
+#progress-bar {
+    background-color: var(--silver-lake-blue);
+    border-radius: 1.5vw;
+    width: 43vw;
+    height: 2.5vw;
+    position: absolute;
+    top: 5.5vw;
+    left: 3vw;
+}
+
+#progress-bar-solved {
+    background-color: var(--tiffany-blue);
+    border-top-left-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+    width: 12vw;
+    height: 2.5vw;
+    position: absolute;
+    top: 5.5vw;
+    left: 3vw;
+}
+
+#progress-bar-attempted {
+    background-color: #A3E0D288; /* tiffany blue with alpha value adjusted */
+    border-top-left-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+    width: 24vw;
+    height: 2.5vw;
+    position: absolute;
+    top: 5.5vw;
+    left: 3vw;
+}
+
+#progress-report {
+    font-family: var(--montserrat);
+    color: var(--basically-white);
+    font-size: 1vw;
+    position: absolute;
+    top: 9.5vw;
+    left: 3vw;
+}
+
+#a, #s1, #s2, #t {
+    position: absolute;
+    font-size: 5vw;
+    height: 2vw;
+    width: 2vw;
+    line-height: 0;
+    top: 0.2vw;
+    left: -0.4vw;
+    color: var(--tiffany-blue);
+}
+
+#s1 {
+    left: 10.4vw;
+    color: var(--silver-lake-blue);
+}
+
+#s2 {
+    left: 10.4vw;
+    color: #A3E0D288; /* tiffany blue with alpha value adjusted */
+}
+
+#t {
+    left: 20.4vw;
+    color: var(--silver-lake-blue);
+}
+
+/* icon block */
+
+#icon {
+    position: absolute;
+    top: 34vw;
+    left: 83vw;
+    width: 13vw;
+    height: 13vw;
+}
+
+#star {
+    stroke: var(--vanilla);
+    fill: var(--vanilla);
+}
+
+/* footer block */
+
+#footer {
+    aspect-ratio: 6/1;
+    position: absolute;
+    font-family: var(--montserrat);
+    color: var(--vanilla);
+    font-size: 1vw;
+}
+
+#star-footer {
+    position: absolute;
+    left: 2.5vw;
+    top: 1.25vw;
+    width: 4.5vw;
+    height: 4.5vw;
+    stroke: var(--vanilla);
+    fill: var(--vanilla);
+}
+
+#footer-link1 > span, #footer-link2 > span {
+    color: var(--basically-white);
+}
+
+#footer-link1 {
+    position: absolute;
+    left: 73vw;
+    top: 1vw;
+    width: 12vw;
+}
+
+#footer-link2 {
+    position: absolute;
+    width: 12vw;
+    left: 86vw;
+    top: 1vw;
+}

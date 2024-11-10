@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <!-- importing stylesheets -->
+    <link rel="stylesheet" href="./profile.css"/>
+    <link href='https://fonts.googleapis.com/css?family=PT Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div id = "header"></div>
+    <div id = "main">
+        <div id="title">
+            < <b>hello, user_name</b> />
+        </div>
+        <div id="user">
+            <div id="pfp">
+                <svg id = "person" viewBox = "-10 -10 105 105" >
+                    <circle r="16" cx="40" cy="20" fill="none" stroke-width="4"/>
+                    <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div id="user-numbers">
+                1<br>
+                2<br>
+                3<br>
+                4<br>
+            </div>
+            <div id = "user-info">
+                team = "team_name"; <br>
+                flags_captured = x; <br>
+                score = x; <br>
+                date_joined = "mm/dd/yyyy"; <br>
+            </div>
+        </div>
+        <div id="notifs">
+            <div id="notifs-text">
+                <b>>></b> notifications
+            </div>
+            <div id="notifs-panel">
+                <div class="alert">
+                    C:\ccc.ctf\admins> <b>echo "event alert"</b>
+                </div>
+                <div class="alert">
+                    C:\ccc.ctf\team> <b>echo "flag found"</b>
+                </div>
+                <div class="alert">
+                    C:\ccc.ctf\team> <b>echo "problem tagged"</b>
+                </div>
+                <div class="alert">
+                    C:\ccc.ctf\admins> <b>echo "new problem"</b>
+                </div>
+            </div>
+        </div>
+        <div id="team">
+            <div id="team-text">
+                < <span>my</span>_<span>team</span> />
+            </div>
+            <div id="create"> <!-- onclick stuff here -->
+                <svg id = "create-person" viewBox = "-10 -10 500 500" >
+                    <circle r="16" cx="40" cy="20" fill="none" stroke-width="4"/>
+                    <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <div id="create-text">
+                    create a team<br>
+                    <span>>> generate a key</span>
+                </div>
+            </div>  
+            <div id="join"><!-- onclick stuff here -->
+                <svg id = "join-person" viewBox = "-10 -10 500 500" >
+                    <circle r="16" cx="40" cy="20" fill="none" stroke-width="4"/>
+                    <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <div id="join-text">
+                    join a team<br>
+                    <span>>> enter a key</span>
+                </div>
+            </div>
+        </div>
+        <div id="progress">
+            <div id="progress-text">
+                < <span>mission</span>_<span>progress</span> />
+            </div>
+            <div id="progress-bar"></div>
+            <div id="progress-bar-attempted"></div>
+            <div id="progress-bar-solved"></div>
+            <div id="progress-report">
+                &emsp;&emsp;attempted - x &emsp;&emsp; &emsp;&emsp;solved - x &emsp;&emsp; &emsp;&emsp;total - x;
+                <div id="a">&#x2022;</div>
+                <div id="s1">&#x2022;</div>
+                <div id="s2">&#x2022;</div>
+                <div id="t">&#x2022;</div>
+            </div>
+        </div>
+        <div id="icon">
+            <svg id = "star" viewBox = "15 -10 60 60" >
+                <polygon id = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
+            </svg>
+        </div>
+    </div>
+    <div id = "footer">
+        <svg id = "star-footer" viewBox = "25 -5 50 55">
+            <polygon class = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
+        </svg>
+        <h1 id="footer-link1">./<span>foot</span>_<span>link</span></h1>
+        <h1 id="footer-link2">./<span>foot</span>_<span>link</span></h1>
+    </div>
+</body>
+<script src="load_header.js"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<!-- <script>
+    const app = Vue.createApp({ 
+        
+    }); 
+    app.mount("#main")
+</script> -->
