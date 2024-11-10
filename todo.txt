@@ -22,6 +22,14 @@ frontend stuff:
     - replace placeholder text on all pages (many hands probably)
     - add breakpoints to most pages (abra + possibly others)
     - animation - apply typing animation from dmitri to other pages, maybe some animation on load
+    - finish loading screen? (dmitri)
+    - move footer to assets? (anthony)
+    - make a second header for users who are logged in? (anthony/abra)
+    - random misc todo messages throughout (mostly abra)
+    - profile page popups:
+        - view full notifications
+        - create a team
+        - join a team
 
 backend stuff:
     - to be determined later
