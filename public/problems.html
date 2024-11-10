@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<head>
+    <!-- importing stylesheets -->
+    <link rel="stylesheet" href="problems.css"/>
+    <script src="problems.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=PT Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- TODO: FIGURE OUT REUSE OF SVGS -->
+
+    <!-- star icon svg prototype -->
+    <!-- <svg id = "star" viewBox = "0 -10 100 300" >
+        <polygon id = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
+    </svg> -->
+
+    <!-- flag icon svg prototype -->
+    <!-- <svg id = "flag" viewBox = "-10 -10 60 60" >
+        <g id="flag-icon">
+            <line x1="0" y1="0" x2="0" y2="49"/>
+            <path d="M 0 0 C 12 -10 24 14 40 0"/>
+            <line x1="40" y1="0" x2="40" y2="27"/>
+            <path d="M 0 27 C 12 16 24 40 40 27"/>
+        </g>
+    </svg> -->
+
+    <!-- info icon svg prototype -->
+    <!-- <svg id = "info" viewBox = "-10 -10 60 60" >
+        <circle r="20" cx="20" cy="20" fill="none" stroke="white" stroke-width="4"/>
+        <line x1="20" y1="18" x2="20" y2="32" stroke="white" stroke-width="5" stroke-linecap="round"/>
+        <line x1="20" y1="10" x2="20" y2="10" stroke="white" stroke-width="5" stroke-linecap="round"/>
+    </svg> -->
+
+    <!-- person icon svg prototype -->
+    <!-- <svg id = "person" viewBox = "-10 -10 150 150" >
+        <circle r="16" cx="40" cy="20" fill="none" stroke="white" stroke-width="4"/>
+        <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/>
+    </svg> -->
+</head>
+<body onload="run()">
+    <div id = "main">
+        <div id = "header">
+            <div id = "icon-header">
+                <svg id = "star-header" viewBox = "25 -5 50 50">
+                    <polygon class = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
+                </svg>
+            </div>
+            <div id = "nav-bar">
+                <!-- about ./page_etc ./page_etc sign in sign up -->
+                <button id="about-button">about</button>
+                <h1 id="link1">./<span>page</span>_<span>etc</span></h1>
+                <h1 id="link2">./<span>page</span>_<span>etc</span></h1>
+                <button id="sign-in-button">sign in</button>
+                <button id="sign-up-button" onclick="window.location.href='./signup.html'"style="cursor: pointer;">sign up</button>
+            </div>
+        </div>
+        <div id = "title">
+            <div id = "title-text">
+                <h1>< <b id="title-b">problems</b></b> /></h1>
+            </div>
+            <div id = "title-subtext">
+                <h1>subheading</h1>
+            </div>
+        </div>
+        <div id = "problems">
+            <div class = "category paused" onclick="clickedCategory(this)" id="top">
+                <h3><span class="code code1">&lt;div&gt;</span>Cryptography<span class="code code2 paused">&lt;/div&gt;</span></h3>
+                <div class="problem-container">
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        the description goes here
+                                        hello world
+                                        hi
+                                        hello
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                                <li>file4</li>
+                                                <li>file5</li>
+                                                <li>file6</li>
+                                                <li>file7</li>
+                                                <li>file8</li>
+                                                <li>file9</li>
+                                                <li>file10</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author: Foo
+                                            Points: None
+                                            Difficulty: Easy
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "category paused" onclick="clickedCategory(this)">
+                <h3><span class="code code1">&lt;div&gt;</span>Code Injection<span class="code code2 moveTail paused">&lt;/div&gt;</span></h3>
+                <div class="problem-container">
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "category paused" onclick="clickedCategory(this)">
+                <h3><span class="code code1">&lt;div&gt;</span>Programming<span class="code code2 moveTail paused">&lt;/div&gt;</span></h3>
+                <div class="problem-container">
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "problem" onclick="clickedProblem(this)">
+                        <div><h3 class="code code3">&lt;div&gt;</h3><h3 class="code34"><span>&lt;h1&gt;</span>   Problem   <span>&lt;h1&gt;</span><h3 class="code code4">&lt;/div&gt;</h3></div>
+                        <div class="problem-inner-dummy">
+                            <div class="problem-description">
+                                <div style="float: left">
+                                    <p>
+                                        description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="problem-files">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Files <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-files-inner">
+                                        <div>
+                                            <ul class="files">
+                                                <li>file1</li>
+                                                <li>file2</li>
+                                                <li>file3</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                                <div class="problem-details">
+                                    <h3 class="pfcode1">&lt;div&gt;</h3>
+                                    <h3><span>&lt;h3&gt;</span> Details <span>&lt;/h3&gt;</span></h3>
+                                    <div class="problem-details-inner">
+                                        <div>Author:
+                                            Points:
+                                            Difficulty:
+                                        </div>
+                                    </div>
+                                    <h3 class="pfcode2">&lt;/div&gt;</h3>
+                                </div>
+                            </div>
+                            <div class="problem-submission">
+                                <span>&lt;input&gt;</span> <input autocomplete="off" placeholder="{ FLAG }"></input> <span>&lt;/input&gt;</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span>&lt;button&gt;</span> <button>Submit</button> <span>&lt;/button&gt;</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "category paused" onclick="clickedCategory(this)">
+                <h3><span class="code code1">&lt;div&gt;</span>Other<span class="code code2 moveTail paused">&lt;/div&gt;</span></h3>
+                <div class="problem-container">
+
+                </div>
+            </div>
+        </div>
+        
+        <div id = "footer">
+            <!-- TODO: ADD FOOTER -->
+            <div id = "star-footer">
+                <svg viewBox = "25 -5 50 55">
+                    <polygon class = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
+                </svg>
+            </div>
+            <div id="footer-link1">
+                <h1>./<span>foot</span>_<span>link</span></h1>
+            </div>
+            <div id="footer-link2">
+                <h1>./<span>foot</span>_<span>link</span></h1>
+            </div>
+        </div>
+    </div>
+    <div id="cover" onclick="exitProblem(this)"></div>
+    <div id="problem-inner">
+        
+    </div>
+</body>

@@ -1,0 +1,1126 @@
+/* overall settings */
+/* TODO: BREAKPOINTS */
+/** giggle that is going to mess up so much of this */
+
+:root {
+    --space-cadet: #282B3E;
+    --purpureus: #BD93F0;
+    --silver-lake-blue: #6C91BF;
+    --silver-lake-blue-light: #89aedb;
+    --tiffany-blue: #A3E0D2;
+    --vanilla: #F7E1A1;
+    --basically-white: #FEFEFA;
+    --block: #323750;
+    --pt-mono: 'PT Mono';
+    --montserrat: 'Montserrat';
+    --category-speed: 1s;
+    --problem-speed: 500ms; /** keep this in ms */
+    --problem-width: 18vw;
+    --problem-height: 2.5vw;
+    --problem-width-ex: 80vw;
+    --problem-height-ex: 90vh;
+}
+
+body {
+    background: var(--space-cadet);
+    max-width: 100%;
+    /* aspect-ratio: 0.6/1; */
+    margin: 0px;
+}
+
+/* #region header block */
+
+#header {
+    aspect-ratio: 20/1;
+    border-bottom: 0.1vw solid var(--silver-lake-blue);
+    position: relative;
+    /* TODO: FIGURE OUT FIXED POSITION */
+}
+
+#nav-bar {
+    position: absolute;
+    left: 45vw;
+    top: 0.8vw;
+    width: 53vw;
+    height: 3vw;
+}
+
+#about-button {
+    position: absolute;
+    left: 10vw;
+    top: 0.3vw;
+    width: 7vw;
+    height: 80%;
+    margin-left: 1vw;
+    background-color: var(--tiffany-blue);
+    color: var(--space-cadet);
+    font-family: var(--montserrat);
+    font-size: 1.4vw;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.4vw;
+}
+
+#nav-bar > h1 {
+    font-family: var(--montserrat);
+    font-size: 1.2vw;
+    color: var(--vanilla);
+    position: absolute;
+}
+
+#link1 > span, #link2 > span {
+    color: var(--basically-white);
+}
+
+#link1 {
+    position: absolute;
+    left: 19.5vw;
+}
+
+#link2 {
+    position: absolute;
+    left: 27.5vw;
+}
+
+#sign-in-button {
+    position: absolute;
+    font-family: var(--montserrat);
+    font-size: 1.4vw;
+    font-weight: bold;
+    background-color: var(--silver-lake-blue);
+    color: var(--space-cadet);
+    border: none;
+    border-radius: 0.4vw;
+    height: 80%;
+    top: 0.3vw;
+    left: 35vw;
+    width: 7vw;
+    margin-left: 1vw;
+}
+
+#sign-up-button {
+    position: absolute;
+    font-family: var(--montserrat);
+    font-size: 1.4vw;
+    font-weight: bold;
+    background-color: var(--purpureus);
+    color: var(--space-cadet);
+    border: none;
+    border-radius: 0.4vw;
+    height: 80%;
+    top: 0.3vw;
+    left: 43vw;
+    width: 7vw;
+    margin-left: 1vw;
+}
+
+
+#icon-header {
+    position: absolute;
+    left: 2vw;
+    top: 0.75vw;
+    width: 3vw;
+    height: 3vw;
+}
+
+#star-header {
+    position: absolute;
+    left: -0.5vw;
+    top: 0.2vw;
+    width: 3vw;
+    height: 3vw;
+    stroke: var(--vanilla);
+    fill: var(--vanilla);
+    stroke-width: 0.3vw;
+}
+
+/* #endregion */
+
+/* #region title block */
+
+#title {
+    position: relative;
+    aspect-ratio: 6/1;
+    border-bottom: 0.1vw solid var(--silver-lake-blue);
+}
+
+#title-text {   
+    /* width: 42vw; */
+    height: 12vw;
+    top: 0vw;
+    left: 50vw;
+    transform: translate(-50%, 0); 
+    font-family: var(--pt-mono);
+    color: var(--vanilla);
+    position: absolute; 
+    font-size: 2.3vw;
+    letter-spacing: 0.1vw;
+}
+
+#title-b {
+    color: var(--basically-white);
+}
+
+#star-title {
+    position: absolute;
+    top: 19.8vw;  
+    left: 5vw;
+    width: 3vw;
+    height: 3vw;
+    stroke: var(--tiffany-blue);
+    fill: var(--tiffany-blue);
+    stroke-width: 0.3vw;
+}
+
+#title-subtext { 
+    top: 8vw;  
+    left: 50vw;
+    transform: translate(-50%, 0); 
+    /* width: 42vw; */
+    position: absolute; 
+    font-family: var(--montserrat);
+    font-size: 1.3vw;
+    color: var(--purpureus);
+}
+
+#title-block {
+    position: relative;
+    background-color: var(--block);
+    height: 36vw;
+    width: 40vw;
+    left: 51vw;
+    margin: 3vw 3vw 3vw 5vw;
+    border-radius: 3vw;
+    font-family: var(--pt-mono);
+}
+
+#title-numbers {
+    color: var(--basically-white);
+    position: absolute;
+    height: 90%;
+    width: 5%;
+    left: 5%;
+    top: 5%;
+    line-height: 3.6vw;
+    font-size: 2.4vw;
+}
+
+#title-code {
+    position: absolute;
+    height: 90%;
+    width: 85%;
+    left: 12%;
+    top: 4.45%;
+    line-height: 3.6vw;
+    font-size: 2.4vw;
+    font-weight: lighter;
+    color: var(--vanilla);
+}
+
+#title-code > b {
+    font-weight: bold;
+    color: var(--basically-white);
+}
+
+.p {
+    color: var(--purpureus);
+}
+
+.s {
+    color: var(--silver-lake-blue);
+}
+
+.t {
+    color: var(--tiffany-blue);
+}
+
+#code-line {
+    position: absolute;
+    left: 11%;
+    top: 52%;
+    width: 10%;
+    height: 40%;
+    stroke: #FEFEFA33; /* --basically-white with alpha value adjusted */
+    stroke-width: 0.06vw;
+}
+
+#star-title-code {
+    position: absolute;
+    top: 31vw;  
+    left: 35vw;
+    width: 3vw;
+    height: 3vw;
+    stroke: var(--vanilla);
+    fill: var(--vanilla);
+    stroke-width: 0.3vw;
+}
+
+/* #endregion */
+
+/* #region about block */
+
+#problems {
+    display: inline-block;
+    aspect-ratio: 2.88/1;
+    padding-bottom: 3vh;
+    border-bottom: 0.1vh solid var(--silver-lake-blue);
+}
+
+#about-block {
+    position: absolute;
+    background-color: var(--block);
+    height: 28vw;
+    width: 27vw;
+    margin-left: 3vw;
+    margin-top: 3.3vw;
+    border-radius: 3vw;
+}
+
+#about-numbers {
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    position: absolute;
+    height: 90%;
+    width: 2vw;
+    left: 1.8vw;
+    top: 1.8vw;
+    line-height: 2.7vw;
+    font-size: 1.9vw;
+}
+
+#about-code {
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    position: absolute;
+    height: 90%;
+    width: 20vw;
+    left: 4.5vw;
+    top: 1.8vw;
+    line-height: 2.68vw;
+    font-size: 1.9vw;
+}
+
+#about-code > b {
+    font-weight: bold;
+    color: var(--basically-white);
+}
+
+#about-what-block {
+    position: absolute;
+    height: 24vw;
+    width: 30vw;
+    margin-top: 6vw;
+    margin-left: 33vw;
+}
+
+#about-why-block {
+    position: absolute;
+    height: 24vw;
+    width: 30vw;
+    margin-top: 6vw;
+    margin-left: 67vw;
+}
+
+.info {
+    stroke: var(--purpureus);
+}
+
+#what-title-text, #why-title-text { 
+    top: -0.8vw;  
+    left: 6vw;
+    width: 25vw;
+    position: absolute; 
+    font-weight: light;
+    letter-spacing: 0.15vw;
+    font-family: var(--pt-mono);
+    font-size: 1.3vw;
+    color: var(--basically-white);
+}
+
+#what-text, #why-text { 
+    top: 4vw;  
+    left: 6vw;
+    width: 23vw;
+    position: absolute; 
+    font-weight: light;
+    letter-spacing: 0.15vw;
+    font-family: var(--montserrat);
+    font-size: 1.8vw;
+    color: var(--vanilla);
+}
+
+/* #endregion */
+
+/* #region team block */
+
+#team {
+    aspect-ratio: 1.3/1;
+    border-bottom: 0.1vh solid var(--silver-lake-blue);
+}
+
+#team-text {   
+    width: 42vw;
+    height: 12vw;
+    top: 85vw;
+    left: 5vw;
+    font-family: var(--pt-mono);
+    color: var(--basically-white);
+    position: absolute; 
+    font-size: 1.7vw;
+    letter-spacing: 0.1vw;
+}
+
+#team-b {
+    color: var(--vanilla);
+}
+
+#team-block {   
+    width: 90vw;
+    height: 52vw;
+    top: 98vw;
+    left: 2vw;
+    position: absolute; 
+}
+
+.teammate {
+    background-color: var(--block);
+    width: 30vw;
+    height: 18vw;
+    top: 6vw;
+    position: absolute;
+    margin:  2vw;
+    border-radius: 3vw;
+}
+
+.teammate-about {
+    width: 30vw;
+    height: 10vw;
+    top: -5vw;
+    position: absolute;
+    margin:  2vw;
+}
+
+#t1 {
+    stroke: var(--purpureus);
+}
+
+#t2 {
+    position: absolute;
+    top: 32vw;
+    stroke: var(--tiffany-blue);
+}
+
+
+#t3 {
+    position: absolute;
+    left: 31vw;
+    stroke: var(--tiffany-blue);
+}
+
+#t4 {
+    position: absolute;
+    top: 32vw;
+    left: 31vw;
+    stroke: var(--vanilla);
+}
+
+#t5 {
+    position: absolute;
+    left: 62vw;
+    stroke: var(--vanilla);
+}
+
+#t6 {
+    position: absolute;
+    top: 32vw;
+    left: 62vw;
+    stroke: var(--tiffany-blue);
+}
+
+.person {
+    position: absolute;
+    top: 1.5vw;
+    left: 0vw;
+    width: 7.5vw;
+    height: 7.5vw;
+}
+
+.name-text {
+    position: absolute;
+    font-family: var(--pt-mono);
+    color: var(--silver-lake-blue);
+    font-size: 3.25vw;
+    left: 8vw;
+    top: 1.5vw;
+}
+
+.role-text {
+    position: absolute;
+    font-family: var(--pt-mono);
+    color: var(--silver-lake-blue);
+    font-size: 2.75vw;
+    left: 8vw;
+    top: 6vw;
+}
+
+.teammate-code {
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    position: absolute;
+    height: 90%;
+    width: 20vw;
+    left: 4.5vw;
+    top: 1.1vw;
+    line-height: 2.68vw;
+    font-size: 1.9vw;
+}
+
+
+.teammate-numbers {
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    position: absolute;
+    height: 90%;
+    width: 2vw;
+    left: 1.8vw;
+    top: 1.2vw;
+    line-height: 2.7vw;
+    font-size: 1.9vw;
+}
+
+/* #endregion */
+
+/* #region footer block */
+
+#footer {
+    /* aspect-ratio: 20/1; */
+    position: relative;
+    display: inline-block;
+    font-family: var(--montserrat);
+    color: var(--vanilla);
+    font-size: 1vw;
+    width: 100vw;
+}
+
+#star-footer {
+    display: inline-block;
+    position: relative;
+    left: 2.5vw;
+    top: 1.25vw;
+    width: 4.5vw;
+    height: 4.5vw;
+    stroke: var(--vanilla);
+    fill: var(--vanilla);
+}
+
+#footer-link1 > span, #footer-link2 > span {
+    color: var(--basically-white);
+}
+
+#footer-link1 {
+    position: relative;
+    display: inline-block;
+    left: 60%;
+}
+
+#footer-link2 {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 0 0;
+    left: 70%;
+}
+
+/* #endregion */
+
+/* #region problems */
+
+@keyframes expand {
+    0% {height: 5vw;}
+    50% {height: 25vw; z-index: 1000;}
+    100% {height: 25vw; z-index: 1000; overflow: visible;}
+    /** moveTail takes twice as long, but not out of sync */
+}
+
+@keyframes interruptOpen {
+    0% {overflow: hidden;}
+    50% {height: 5vw;}
+    100% {height: 5vw;}
+}
+
+@keyframes interruptOpenTail {
+    0% {transform: translate(0%,-144%);}
+    100% {left: 95%; transform: translate(-100%,-144%);}
+}
+
+@keyframes interruptClose {
+    0% {overflow: hidden;}
+    /* 50% {height: 25vw;} */
+    100% {height: 25vw; overflow: visible;}
+}
+
+@keyframes interruptCloseTail {
+    0% {}
+    50% {left: 5%; transform: translate(0%,-144%);}
+    100% {left: 5%; transform: translate(0%,-144%);}
+}
+
+@keyframes moveTail {
+    0% {left: 95%; transform: translate(-100%,-144%);}
+    50% {left: 95%; transform: translate(-100%,-144%);}
+    90% {left: 5%; transform: translate(0%,-144%);}
+    100% {left: 5%; transform: translate(0%,-144%);}
+    /** pause isn't consistent at timing before alternate, add buffer */
+}
+
+.category {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    background-color: var(--block);
+    height: 5vw;
+    width: 80vw;
+    /* margin-left: 3vw; */
+    left: 50vw;
+    text-align: center;
+    /* vertical-align: middle; */
+    line-height: 2.5vw;
+    transform: translate(-50%, 0); 
+    margin-top: 3.3vw;
+    border-radius: 3vw;
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    font-size: 1.2vw;
+    animation: expand var(--category-speed) ease-in infinite alternate forwards;
+    animation-fill-mode: forwards;
+}
+
+.category h3 {
+    margin-block-end: 0.5em;
+}
+
+.problem-container {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    /* padding-left: 5vw; */
+    /* background-color: red; */
+    width: 71vw;
+    height: 17vw;
+    opacity: 0;
+    transition: opacity .5s;
+    transition-delay: .5s;
+}
+
+.problem-appear {
+    opacity: 1;
+    transition: opacity .5s;
+    transition-delay: 0s;
+}
+
+.problem {
+    position: relative;
+    display: inline-block;
+    /* float: left; */
+    overflow: hidden;
+    background-color: var(--silver-lake-blue);
+    height: var(--problem-height);
+    width: var(--problem-width);
+    min-width: 18vw; /*! important */
+    /* margin-left: 3vw; */
+    /* left: 50vw; */
+    text-align: center;
+    /* vertical-align: middle; */
+    line-height: var(--problem-height);
+    /* transform: translate(-50%, 0);  */
+    margin: 0vw 1vw 1vw 1vw;
+    border-radius: 3vw;
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    font-size: 1.2vw;
+}
+
+.problem .return {
+    transition: opacity var(--problem-speed) linear calc(3.5*var(--problem-speed));
+    opacity: 1;
+}
+
+.paused {
+    animation-play-state: paused !important;
+}
+
+.problem .problem-inner-dummy {
+    display: none;
+}
+
+#problem-inner .problem-inner-dummy {
+    position: absolute;
+    margin: 0 0;
+    top: calc(2*var(--problem-height));
+    width: 100%;
+    height: 100%;
+}
+
+#problem-inner {
+    visibility: hidden;
+    overflow: hidden;
+    position: fixed;
+    width: var(--problem-width);
+    height: var(--problem-height);
+    margin: 0 0;
+    background-color: var(--silver-lake-blue);
+    border-radius: 3vw;
+    /*TODO this doesn't work right when zoomed in, and needs a console log */
+    transition: all var(--problem-speed);
+    z-index: 1200;
+    text-align: center;
+    line-height: var(--problem-height);
+    /* margin: 0vw 1vw 1vw 1vw; */
+    color: var(--basically-white);
+    font-family: var(--pt-mono);
+    font-size: 1.4vw;
+    font-weight: bold;
+}
+
+/** keyframes need to be manually split since we don't know left, top */
+@keyframes problemExpand1 {
+    0% {width: var(--problem-width);}
+    100% {width: 80vw;}
+}
+
+@keyframes problemExpand2 {
+    0% {border-radius: 3vw; height: var(--problem-height);}
+    1% {border-radius: 1.5vw;}
+    100% {height: 90vh; border-radius: 1.5vw;}
+}
+
+@keyframes problemExpand3 {
+    0% {}
+    100% {
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+    }
+}
+
+.problem-inner-expand {
+    visibility: visible !important;
+    /* left: 50% !important;
+    top: 50% !important; */
+    /* transform: translate(-50%,-50%); */
+    /* width: 80vw !important; */
+    /* height: 90vh !important; */
+    /* transition: all 3s; */
+    animation: problemExpand1 var(--problem-speed) ease normal forwards, 
+               problemExpand2 var(--problem-speed) ease var(--problem-speed) normal forwards,
+               problemExpand3 var(--problem-speed) ease calc(2*var(--problem-speed)) normal forwards;
+    animation-direction: normal;
+}
+
+.problem-inner-collapse {
+    animation: problemExpand3 var(--problem-speed) ease-out normal backwards, 
+               problemExpand1 var(--problem-speed) ease-out var(--problem-speed) normal backwards,
+               problemExpand2 var(--problem-speed) ease-out calc(1.5*var(--problem-speed)) normal backwards;
+    animation-direction: reverse !important;
+    transition: opacity var(--problem-speed) linear calc(2.5*var(--problem-speed)) !important;
+    opacity: 0;
+}
+
+.problem-inner-collapse .code4 {
+    transition: opacity var(--problem-speed) linear calc(1.6*var(--problem-speed)) !important;
+    opacity: 0;
+}
+
+#cover {
+    opacity: 0;
+    /* display: none; */
+    visibility: hidden;
+    position: fixed;
+    width: 300vw;
+    height: 300vh;
+    left: -100vw;
+    top: -100vh;
+    background-color: black;
+    transition: opacity var(--problem-speed);
+    z-index: 1100;
+}
+
+.coverShown {
+    opacity: .4 !important;
+    visibility: visible !important;
+}
+
+.reverseOpen {
+    /* animation: interruptOpen 1s ease-in 1 normal forwards; */
+    animation-name: interruptOpen !important;
+    animation-timing-function: ease-in !important;
+    animation-fill-mode: forwards !important;
+    animation-direction: normal !important;
+    animation-iteration-count: 1 !important;
+    animation-duration: var(--category-speed);
+}
+
+.reverseClose {
+    animation-name: interruptClose !important;
+    animation-timing-function: ease-in !important;
+    animation-fill-mode: forwards !important;
+    animation-direction: normal !important;
+    animation-iteration-count: 1 !important;
+    animation-duration: var(--category-speed);
+}
+
+.reverseOpenTail {
+    /* animation: interruptOpenTail 1s ease-in 1 normal forwards !important; */
+    animation-name: interruptOpenTail !important;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards !important;
+    animation-direction: normal !important;
+    animation-iteration-count: 1 !important;
+    animation-duration: var(--category-speed);
+}
+
+.reverseCloseTail {
+    animation-name: interruptCloseTail !important;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards !important;
+    animation-direction: normal !important;
+    animation-iteration-count: 1 !important;
+    animation-duration: var(--category-speed);
+}
+
+/* .problem.code34 span {
+    display: none;
+} */
+
+.problem div .code34 span {
+    display: none;
+}
+
+.code {
+    position: absolute;
+    color: var(--space-cadet);
+    font-size: 1.4vw;
+}
+
+.code1 {
+    left: 5%;
+}
+
+.code2 {
+    left: 95%; /** why does right not work for this :/ */
+    top: 100%;
+    /* display: inline-block; */
+    transform: translate(-100%,-144%);
+    /** ensure parent and child animation durations match */
+    animation: moveTail var(--category-speed) ease-in infinite alternate backwards;
+}
+
+.code3 {
+    left: 0%;
+    margin-left: calc(.05*var(--problem-width));
+    margin-top: 0;
+    color: var(--silver-lake-blue-light);
+    z-index: 3;
+    font-size: 1.4vw;
+}
+
+.code4 {
+    left: 100%;
+    margin-right: calc(.95*var(--problem-width));
+    transform: translate(-115%,-100%);
+    top: 100%;
+    margin-top: 0;
+    color: var(--silver-lake-blue-light);
+    z-index: 4;
+    font-size: 1.4vw;
+}
+
+.code4A {
+    animation: code4Anim var(--problem-speed) ease 1 calc(2*var(--problem-speed)) normal forwards;
+}
+
+@keyframes code4Anim {
+    0% {}
+    100% {
+        left: 0%;
+        margin-right: 0;
+        margin-left: calc(.05*var(--problem-width));
+        transform: translate(0,-100%);
+    }
+}
+
+.code34 {
+    position: relative;
+    display: inline;
+    margin: 0 0;
+    left: -2.5%; /** account for extra / character */
+    transform: translate(-50%,0);
+    z-index: 2;
+    top: 0;
+    font-size: 1.4vw;
+}
+
+.code34A {
+    animation: code34Anim1 calc(var(--problem-speed)) ease-out 1 calc(1*var(--problem-speed)) normal forwards,
+               code34Anim2 calc(var(--problem-speed)/5) linear 1 calc(2*var(--problem-speed)) normal forwards,
+               code34Anim3 calc(var(--problem-speed)/2) ease-out 1 calc(2.2*var(--problem-speed)) normal forwards;
+    
+}
+
+@keyframes code34Anim1 {
+    0% {font-size: 1.4vw;}
+    100% {font-size: 2.8vw; top: calc(.05*var(--problem-width));}
+}
+
+@keyframes code34Anim2 {
+    0% {top: calc(.05*var(--problem-width));}
+    100% {top: var(--problem-height); }
+}
+
+@keyframes code34Anim3 {
+    0% {}
+    100% {
+        left: calc(-.2725*var(--problem-width-ex));
+        transform: translate(0,0);
+        /** .1 is ~2 characters */
+        /* margin-left: calc(.25*var(--problem-width)); */
+    }
+}
+
+@keyframes colorFade {
+    0% {color: var(--silver-lake-blue); opacity: 1;}
+    100% {color: var(--silver-lake-blue-light); opacity: 1;}
+}
+
+.code34 span {
+    color: var(--silver-lake-blue);
+    opacity: 0;
+    animation: colorFade var(--problem-speed) ease-in 1 calc(1*var(--problem-speed)) normal forwards;
+}
+
+.problem-description {
+    position: relative;
+    left: calc(0.05*var(--problem-width-ex));
+    text-align: left;
+    float: left;
+}
+
+.sidebar {
+    position: relative;
+    float: right;
+    top: calc(-2*var(--problem-height));
+    height: var(--problem-height-ex);
+    width: calc(0.25*var(--problem-width-ex));
+    overflow: hidden;
+    border-left: 1px solid var(--silver-lake-blue-light);
+}
+
+.problem-files {
+    position: relative;
+    text-align: left;
+    float: right;
+    border: 1px solid var(--silver-lake-blue-light);
+    border-top: none;
+    border-right: none;
+    width: calc(0.25*var(--problem-width-ex));
+    /* top: calc(-2*var(--problem-height)); */
+    height: calc(0.6*var(--problem-height-ex));
+    overflow: hidden;
+}
+
+.problem-files-inner {
+    position: relative;
+    float: left;
+    left: calc(0.025*var(--problem-width-ex));
+}
+
+.sidebar h3 {
+    position: relative;
+    margin: 0;
+    margin-bottom: var(--problem-height);
+    top: var(--problem-height);
+    left: calc(0.025*var(--problem-width-ex));
+    font-size: 1.6vw;
+    display: inline-block;
+}
+
+.sidebar h3 span {
+    color: var(--silver-lake-blue-light);
+}
+
+h3.pfcode1 {
+    color: var(--silver-lake-blue-light);
+    position: absolute;
+    top: 0;
+    left: calc(0.0125*var(--problem-width-ex));
+    font-size: 1.4vw;
+}
+
+h3.pfcode2 {
+    width: 100%;
+    color: var(--silver-lake-blue-light);
+    position: absolute;
+    top: 100%;
+    left: calc(0.0125*var(--problem-width-ex));
+    font-size: 1.4vw;
+    transform: translate(0,-100%);
+    background-color: var(--silver-lake-blue);
+}
+
+@keyframes enterLeft1 {
+    0% {transform: translate(450%, 0);}
+    100% {transform: translate(0);}
+}
+
+@keyframes enterLeft2 {
+    0% {transform: translate(150%, -100%);}
+    100% {transform: translate(0, -100%);}
+}
+
+.problem-files h3 {
+    transform: translate(450%, 0);
+    animation: enterLeft1 calc(3*var(--problem-speed)) ease-out 1 calc(2*var(--problem-speed)) normal forwards;
+}
+
+.problem-files h3.pfcode2 {
+    transform: translate(150%, -100%);
+    animation: enterLeft2 calc(3*var(--problem-speed)) ease-out 1 calc(2*var(--problem-speed)) normal forwards;
+}
+
+.problem-details h3 {
+    transform: translate(450%, 0);
+    animation: enterLeft1 calc(3*var(--problem-speed)) ease-out 1 calc(3*var(--problem-speed)) normal forwards;
+}
+
+.problem-details h3.pfcode2 {
+    transform: translate(150%, -100%);
+    animation: enterLeft2 calc(3*var(--problem-speed)) ease-out 1 calc(3*var(--problem-speed)) normal forwards;
+}
+
+.problem-files-inner div {
+    max-height: calc(0.7*.6*var(--problem-height-ex));
+    overflow-x: visible;
+    overflow-y: scroll;
+    box-shadow: 1px 1px 8px -5px black inset, -1px -1px 8px -5px black inset;
+}
+
+ul.files {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* max-height: calc(0.4*var(--problem-height-ex)); */
+    overflow-x: visible;
+    width: calc(0.25*.6*var(--problem-width-ex));
+    font-size: 1.4vw;
+}
+
+ul.files li {
+    position: relative;
+    border-top: 1px solid var(--silver-lake-blue-light);
+    border-bottom: 1px solid var(--silver-lake-blue-light);
+    white-space: nowrap;
+    margin: -1px;
+    padding: 5px;
+    font-size: 1.4vw;
+}
+
+
+/*! This is broken */
+ul.files li::before, ul.files li::after {
+    position: absolute;
+    /* color: var(--silver-lake-blue-light); */
+    color: red;
+}
+
+ul.files li::before {
+    left: -15px;
+    content: "<li>";
+}
+
+ul.files li::after {
+    right: -15px;
+    content: "</li>";
+}
+
+.problem-details {
+    position: relative;
+    text-align: left;
+    float: right;
+    border: 1px solid var(--silver-lake-blue-light);
+    border-top: none;
+    border-right: none;
+    width: calc(0.25*var(--problem-width-ex));
+    top: calc(-2*var(--problem-height) + 0.6*var(--problem--height-ex));
+    height: calc(0.4*var(--problem-height-ex));
+    overflow: hidden;
+}
+
+.problem-details-inner {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    left: calc(0.025*var(--problem-width-ex));
+}
+
+.problem-details-inner div {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(0.7*.4*var(--problem-height-ex));
+}
+
+@keyframes enterBottom {
+    0% {transform: translate(0,0);}
+    100% {transform: translate(0,-200%);}
+}
+
+.problem-submission {
+    position: absolute;
+    margin-right: calc(.05*var(--problem-width));
+    /* top: calc(1*var(--problem-height-ex) - 2*var(--problem-height)); */
+    bottom: 0;
+    right: calc(0.25*var(--problem-width-ex));
+    transform: translate(0,0);
+    text-align: center;
+    white-space: nowrap;
+    animation: enterBottom calc(3*var(--problem-speed)) ease-out 1 calc(7*var(--problem-speed)) normal forwards;
+}
+
+.problem-submission span {
+    color: var(--silver-lake-blue-light);
+}
+
+.problem-submission button {
+    display: inline-block;
+    font: inherit;
+    border-radius: 0.5vw;
+    vertical-align: top;
+    padding: 0 0.1vw;
+    font-size: 1vw;
+    height: calc(0.8*var(--problem-height));
+    margin: 0 0;
+    line-height: 0px;
+    margin-top: .25vw;
+    color: var(--basically-white);
+    background-color: var(--purpureus);
+    border: none;
+}
+
+.problem-submission input {
+    display: inline-block;
+    font: inherit;
+    /* line-height: 0px; */
+    font-size: 1vw;
+    border-radius: 0.5vw;
+    border: none;
+    top: -100px;
+    padding: 0 0.3vw;
+    padding-bottom: 0.25vw;
+    transform: translate(0,-17%);
+    background-color: var(--block);
+    color: var(--basically-white);
+    height: calc(0.5*var(--problem-height));
+    /* vertical-align: top; */
+}
+
+/* #endregion */
+
+
