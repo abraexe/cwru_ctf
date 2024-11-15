@@ -133,38 +133,3 @@ input[type=text] {
 }
 
 
-#footer {
-    aspect-ratio: 6/1;
-    position: absolute;
-    font-family: var(--montserrat);
-    color: var(--vanilla);
-    font-size: 1vw;
-}
-
-#star-footer {
-    position: absolute;
-    left: 2.5vw;
-    top: 1.25vw;
-    width: 4.5vw;
-    height: 4.5vw;
-    stroke: var(--vanilla);
-    fill: var(--vanilla);
-}
-
-#footer-link1 > span, #footer-link2 > span {
-    color: var(--basically-white);
-}
-
-#footer-link1 {
-    position: absolute;
-    left: 73vw;
-    top: 1vw;
-    width: 12vw;
-}
-
-#footer-link2 {
-    position: absolute;
-    width: 12vw;
-    left: 86vw;
-    top: 1vw;
-}
