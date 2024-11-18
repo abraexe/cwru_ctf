@@ -17,14 +17,12 @@
 
 web team
 frontend stuff:
-    - profile page - mostly done in figma (zijin/abra), not coded (abra)
-    - problem page - working on in code (dmitri)
-    - replace placeholder text on all pages (many hands probably)
+    - style edit problem page (abra)
+        - figure out weird firefox/chrome problem page error (dmitri)
     - add breakpoints to most pages (abra + possibly others)
     - animation - apply typing animation from dmitri to other pages, maybe some animation on load
     - finish loading screen? (dmitri)
-    - move footer to assets? (anthony)
-    - make a second header for users who are logged in? (anthony/abra)
+    - implement footer with iraj updates (abra)
     - random misc todo messages throughout (mostly abra)
     - profile page popups:
         - view full notifications
