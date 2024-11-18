@@ -39,8 +39,20 @@
 </head>
 <body>
     <div id = "main">
-        <div id = "header"></div>
-        <!-- WILL BE IMPORTED VIA JS SCRIPT AT BOTTOM-->
+        <div id = "header">
+            <div id = "icon-header">
+                <svg id = "star-header" viewBox = "25 -5 50 50">
+                    <polygon class = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
+                </svg>
+            </div>
+            <div id = "nav-bar">
+                <button id="about-button">about</button>
+                <h1 id="link1"><a href="#about">./<span>our</span>_<span>team</span></a></h1>
+                <h1 id="link2"><a href="#footer">./<span>links</span></a></h1>
+                <button id="sign-in-button" onclick="window.location.href='./login.html'">sign in</button>
+                <button id="sign-up-button" onclick="window.location.href='./signup.html'">sign up</button>
+            </div>
+        </div>
         <div id = "title">
             <div id = "title-text">
                 <h1>< <b id="title-b">cwru</b>_<b id="title-b">ctf</b> /></h1>
@@ -49,7 +61,7 @@
                 <polygon class = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
             </svg>
             <div id = "title-subtext">
-                <h1>subheading</h1>
+                <h1>decode, decipher, defend</h1>
             </div>
             <div id = "title-block">
                 <div id = "title-numbers">
@@ -83,12 +95,16 @@
                     <line x1="3" y1="1.5" x2="3" y2="24"/>
                 </svg>
                 <div id = "about-code">
-                    code placeholder; cout >> about; <br>
-                    this is uhh idk <br><br>
-                    int about() { <br>
-                        &emsp;what; <br>
-                        &emsp;to do: code; <br><br>
-                    }
+                    <span class="p">struct</span> <span class="t">ctf_coder</span>
+                    = {
+                        "<b>l33tc0der</b>",
+                        &emsp;"<b>iq=1000</b>"<br>
+                    }<span class="t">;</span> <br><br>
+                    <span class="p">struct</span> <span class="t">reg_coder</span>
+                    = {
+                        "<b>avg_coder</b>",
+                        &emsp;"<b>iq=regular</b>"<br>
+                    }<span class="t">;</span>
                 </div>
             </div>
             <div id = "about-what-block">
@@ -101,10 +117,9 @@
                     <h1>what is ctf?</h1>
                 </div>
                 <div id = "what-text">
-                    <p>body text, about ctf, what it is, 
-                        etc etc etc more body text to fill the 
-                        space so we know what it might look 
-                        like with a lot of text here and etc
+                    <p>capture the flag (ctf) is a challenge where
+                        players attempt to find a string of text,
+                        or a flag, which is secretly hidden in a vulnerable program
                     </p>
                 </div>
             </div>
@@ -118,10 +133,9 @@
                     <h1>why ctf?</h1>
                 </div>
                 <div id = "why-text">
-                    <p>body text, about ctf, what it is, 
-                        etc etc etc more body text to fill the 
-                        space so we know what it might look 
-                        like with a lot of text here and etc
+                    <p>ctf problems can cover a wide variety of programming and
+                        security concepts, giving players a chance to test their skils
+                        with hands-on problems
                     </p>
                 </div>
             </div>
@@ -138,23 +152,10 @@
                             <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4.5" stroke-linecap="round"/>
                         </svg>
                         <div class = "name-text">
-                            Teammate
+                            Abra
                         </div>
                         <div class = "role-text">
-                            #role
-                        </div>
-                    </div>
-                    <div class="teammate">
-                        <div class = "teammate-numbers">
-                            1 2 3 4 5 6
-                        </div>
-                        <div class = "teammate-code">
-                            struct teammate { <br>
-                                &emsp;uhhhh idk; <br>
-                                &emsp;code and stuff <br>
-                                &emsp;what; <br>
-                                &emsp;to do: code;<br>
-                            }
+                            #team-lead
                         </div>
                     </div>
                 </div>
@@ -165,23 +166,10 @@
                             <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4.5" stroke-linecap="round"/>
                         </svg>
                         <div class = "name-text">
-                            Teammate
+                            Dmitri
                         </div>
                         <div class = "role-text">
-                            #role
-                        </div>
-                    </div>
-                    <div class="teammate">
-                        <div class = "teammate-numbers">
-                            1 2 3 4 5 6
-                        </div>
-                        <div class = "teammate-code">
-                            struct teammate { <br>
-                                &emsp;uhhhh idk; <br>
-                                &emsp;code and stuff <br>
-                                &emsp;what; <br>
-                                &emsp;to do: code;<br>
-                            }
+                            #web
                         </div>
                     </div>
                 </div>
@@ -192,23 +180,10 @@
                             <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4.5" stroke-linecap="round"/>
                         </svg>
                         <div class = "name-text">
-                            Teammate
+                            Iraj
                         </div>
                         <div class = "role-text">
-                            #role
-                        </div>
-                    </div>
-                    <div class="teammate">
-                        <div class = "teammate-numbers">
-                            1 2 3 4 5 6
-                        </div>
-                        <div class = "teammate-code">
-                            struct teammate { <br>
-                                &emsp;uhhhh idk; <br>
-                                &emsp;code and stuff <br>
-                                &emsp;what; <br>
-                                &emsp;to do: code;<br>
-                            }
+                            #web
                         </div>
                     </div>
                 </div>
@@ -219,23 +194,10 @@
                             <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4.5" stroke-linecap="round"/>
                         </svg>
                         <div class = "name-text">
-                            Teammate
+                            Zijin
                         </div>
                         <div class = "role-text">
-                            #role
-                        </div>
-                    </div>
-                    <div class="teammate">
-                        <div class = "teammate-numbers">
-                            1 2 3 4 5 6
-                        </div>
-                        <div class = "teammate-code">
-                            struct teammate { <br>
-                                &emsp;uhhhh idk; <br>
-                                &emsp;code and stuff <br>
-                                &emsp;what; <br>
-                                &emsp;to do: code;<br>
-                            }
+                            #web
                         </div>
                     </div>
                 </div>
@@ -246,50 +208,10 @@
                             <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4.5" stroke-linecap="round"/>
                         </svg>
                         <div class = "name-text">
-                            Teammate
+                            Aaron
                         </div>
                         <div class = "role-text">
-                            #role
-                        </div>
-                    </div>
-                    <div class="teammate">
-                        <div class = "teammate-numbers">
-                            1 2 3 4 5 6
-                        </div>
-                        <div class = "teammate-code">
-                            struct teammate { <br>
-                                &emsp;uhhhh idk; <br>
-                                &emsp;code and stuff <br>
-                                &emsp;what; <br>
-                                &emsp;to do: code;<br>
-                            }
-                        </div>
-                    </div>
-                </div>
-                <div id="t5">
-                    <div class="teammate-about">
-                        <svg class = "person" viewBox = "0 0 80 80" >
-                            <circle r="16" cx="40" cy="20" fill="none" stroke-width="4.5"/>
-                            <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4.5" stroke-linecap="round"/>
-                        </svg>
-                        <div class = "name-text">
-                            Teammate
-                        </div>
-                        <div class = "role-text">
-                            #role
-                        </div>
-                    </div>
-                    <div class="teammate">
-                        <div class = "teammate-numbers">
-                            1 2 3 4 5 6
-                        </div>
-                        <div class = "teammate-code">
-                            struct teammate { <br>
-                                &emsp;uhhhh idk; <br>
-                                &emsp;code and stuff <br>
-                                &emsp;what; <br>
-                                &emsp;to do: code;<br>
-                            }
+                            #problems
                         </div>
                     </div>
                 </div>
@@ -300,23 +222,24 @@
                             <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4.5" stroke-linecap="round"/>
                         </svg>
                         <div class = "name-text">
-                            Teammate
+                            Brian
                         </div>
                         <div class = "role-text">
-                            #role
+                            #problems
                         </div>
                     </div>
-                    <div class="teammate">
-                        <div class = "teammate-numbers">
-                            1 2 3 4 5 6
+                </div>
+                <div id="t7">
+                    <div class="teammate-about">
+                        <svg class = "person" viewBox = "0 0 80 80" >
+                            <circle r="16" cx="40" cy="20" fill="none" stroke-width="4.5"/>
+                            <path d="M8 75 C8 35 72 35 72 75" fill="none" stroke-width="4.5" stroke-linecap="round"/>
+                        </svg>
+                        <div class = "name-text">
+                            Mo
                         </div>
-                        <div class = "teammate-code">
-                            struct teammate { <br>
-                                &emsp;uhhhh idk; <br>
-                                &emsp;code and stuff <br>
-                                &emsp;what; <br>
-                                &emsp;to do: code;<br>
-                            }
+                        <div class = "role-text">
+                            #problems
                         </div>
                     </div>
                 </div>
@@ -326,12 +249,11 @@
             <svg id = "star-footer" viewBox = "25 -5 50 55">
                 <polygon class = "star-icon" points="50 0, 45 16, 30 21, 45 26, 50 42, 55 26, 70 21, 55 16"/>
             </svg>
-            <h1 id="footer-link1">./<span>foot</span>_<span>link</span></h1>
-            <h1 id="footer-link2">./<span>foot</span>_<span>link</span></h1>
+            <h1 id="footer-link1">./<span>github</span></h1>
+            <h1 id="footer-link2">./<span>contact</span></h1>
         </div>
     </div>
 </body>
-<script src="load_header.js"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <!-- <script>
     const app = Vue.createApp({ 
